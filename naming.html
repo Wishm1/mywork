@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中文取名神器 - 专业起名服务</title>
+    <meta name="description" content="专业的中文取名工具，结合五行八字、诗词典故，为您的宝宝起个好名字">
+    <link rel="stylesheet" href="naming-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 页头 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-feather-alt"></i>
+                <span>取名神器</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">首页</a>
+                <a href="#features">功能</a>
+                <a href="#about">关于</a>
+                <a href="#contact">联系</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main">
+        <!-- 英雄区域 -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">中文取名神器</span>
+                    </h1>
+                    <p class="hero-subtitle">结合传统文化与现代科学，为您的宝宝精心挑选寓意美好的名字</p>
+                    <div class="hero-features">
+                        <div class="feature-tag">
+                            <i class="fas fa-yin-yang"></i>
+                            <span>五行八字</span>
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-book-open"></i>
+                            <span>诗词典故</span>
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-star"></i>
+                            <span>寓意美好</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 取名表单 -->
+        <section class="naming-section">
+            <div class="container">
+                <div class="naming-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-magic"></i> 开始取名</h2>
+                        <p>请填写以下信息，我们将为您生成专属好名</p>
+                    </div>
+
+                    <form class="naming-form" id="namingForm">
+                        <!-- 基本信息 -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> 基本信息</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="surname">姓氏 *</label>
+                                    <input type="text" id="surname" name="surname" placeholder="请输入姓氏" maxlength="2" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">性别 *</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="male" checked>
+                                            <span class="radio-custom"></span>
+                                            <i class="fas fa-mars"></i> 男孩
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="female">
+                                            <span class="radio-custom"></span>
+                                            <i class="fas fa-venus"></i> 女孩
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="birthDate">出生日期</label>
+                                    <input type="date" id="birthDate" name="birthDate">
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthTime">出生时间</label>
+                                    <input type="time" id="birthTime" name="birthTime">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 取名方式 -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-cogs"></i> 取名方式</h3>
+                            <div class="naming-methods">
+                                <label class="method-card">
+                                    <input type="checkbox" name="method" value="classical" checked>
+                                    <div class="method-content">
+                                        <i class="fas fa-pagelines"></i>
+                                        <h4>经典取名</h4>
+                                        <p>传统文化内涵丰富</p>
+                                    </div>
+                                </label>
+                                <label class="method-card">
+                                    <input type="checkbox" name="method" value="poetry" checked>
+                                    <div class="method-content">
+                                        <i class="fas fa-feather"></i>
+                                        <h4>诗词取名</h4>
+                                        <p>引经据典，文雅有韵</p>
+                                    </div>
+                                </label>
+                                <label class="method-card">
+                                    <input type="checkbox" name="method" value="modern">
+                                    <div class="method-content">
+                                        <i class="fas fa-rocket"></i>
+                                        <h4>现代取名</h4>
+                                        <p>时尚简洁，易读易记</p>
+                                    </div>
+                                </label>
+                                <label class="method-card">
+                                    <input type="checkbox" name="method" value="wuxing">
+                                    <div class="method-content">
+                                        <i class="fas fa-yin-yang"></i>
+                                        <h4>五行取名</h4>
+                                        <p>根据生辰八字平衡</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 特殊要求 -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-heart"></i> 特殊要求</h3>
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="requirements">期望寓意或要求</label>
+                                    <textarea id="requirements" name="requirements" placeholder="如：希望孩子聪明伶俐、健康快乐，或避免某些字等..." rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 生成按钮 -->
+                        <div class="form-actions">
+                            <button type="submit" class="generate-btn">
+                                <i class="fas fa-sparkles"></i>
+                                <span>生成好名字</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 结果展示 -->
+        <section class="results-section" id="results" style="display: none;">
+            <div class="container">
+                <div class="results-card">
+                    <div class="results-header">
+                        <h2><i class="fas fa-gifts"></i> 精选好名</h2>
+                        <p>根据您的要求，我们为您精心挑选了以下名字</p>
+                    </div>
+
+                    <div class="names-grid" id="namesGrid">
+                        <!-- 动态生成的名字卡片 -->
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="regenerate-btn" onclick="generateNames()">
+                            <i class="fas fa-redo"></i> 重新生成
+                        </button>
+                        <button class="save-btn" onclick="saveNames()">
+                            <i class="fas fa-download"></i> 保存结果
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 名字详情模态框 -->
+        <div class="modal" id="nameDetailModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalNameTitle"></h3>
+                    <button class="modal-close" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body" id="modalNameDetails">
+                    <!-- 动态内容 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 功能介绍 -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>专业取名服务</h2>
+                    <p>多维度分析，确保每个名字都有深层含义</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>智能分析</h3>
+                        <p>结合音韵学、语言学等多学科知识，智能分析名字的各项指标</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-scroll"></i>
+                        </div>
+                        <h3>文化底蕴</h3>
+                        <p>深度挖掘古典文学、诗词歌赋，确保每个名字都有文化内涵</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>五行平衡</h3>
+                        <p>根据生辰八字分析五行属性，推荐有助于运势的名字组合</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>重名分析</h3>
+                        <p>基于大数据分析重名率，确保您的宝宝拥有独特的名字</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系服务 -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h2>专业定制服务</h2>
+                        <p>如需更专业的一对一取名服务，可以联系我们</p>
+
+                        <div class="service-items">
+                            <div class="service-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>基础取名服务</h4>
+                                    <p>提供10-15个精选名字，包含基本寓意解释</p>
+                                    <span class="price">￥99</span>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <i class="fas fa-crown"></i>
+                                <div>
+                                    <h4>专业定制服务</h4>
+                                    <p>一对一咨询，深度分析，提供详细报告</p>
+                                    <span class="price">￥299</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-methods">
+                            <a href="#" class="contact-btn wechat">
+                                <i class="fab fa-weixin"></i>
+                                微信咨询
+                            </a>
+                            <a href="#" class="contact-btn phone">
+                                <i class="fas fa-phone"></i>
+                                电话咨询
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="qr-code">
+                        <div class="qr-placeholder">
+                            <i class="fab fa-weixin"></i>
+                            <p>扫码添加微信</p>
+                            <small>获取专业取名服务</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="logo">
+                        <i class="fas fa-feather-alt"></i>
+                        <span>取名神器</span>
+                    </div>
+                    <p>专业的中文取名服务平台</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>服务</h4>
+                    <a href="#">在线取名</a>
+                    <a href="#">专业咨询</a>
+                    <a href="#">定制服务</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>关于</h4>
+                    <a href="#">关于我们</a>
+                    <a href="#">服务条款</a>
+                    <a href="#">隐私政策</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 取名神器. 专业起名服务平台.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="naming-script.js"></script>
+</body>
+</html>
